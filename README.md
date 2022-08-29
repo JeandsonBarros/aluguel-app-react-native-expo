@@ -11,4 +11,4 @@ Running the app: `expo start` or `npm start`
 
 This project uses Firebase to store product images and data, user data, and authentication, so you need to pass Firebase settings to the firebase.js file as shown in the following image:
 
-![Figure 2](.Firebase.png)
+![Figure 2](./Firebase.png)
