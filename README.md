@@ -7,6 +7,7 @@ Neste aplicativo desenvolvido com React Native Expo e FireBase, as pessoas podem
 ## Execução
 
 Instalação de dependências: `npm install`
+
 Executando o aplicativo: `expo start` ou `npm start`
 
 Este projeto usa o Firebase para armazenar imagens e dados de produtos, dados do usuário e autenticação. Portanto, você precisa passar as configurações do Firebase para o arquivo firebase.js, conforme mostrado na imagem a seguir:
