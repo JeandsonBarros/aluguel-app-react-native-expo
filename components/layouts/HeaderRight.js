@@ -3,7 +3,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 function HeaderRight({ navigation }) {
 
-    // Leva para a tela do local informado na variável ou para a tela do login
+    // Leva para a tela do local informado por parâmetro ou para a tela do login
     function navigate(local) {
 
         const auth = getAuth();

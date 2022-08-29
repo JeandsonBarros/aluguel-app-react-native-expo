@@ -25,7 +25,7 @@ function Carrinho({ navigation, route }) {
 
     }, [])
 
-    // Obtem os produtos que estão no carrinho do cliente logado
+    // Obtém os produtos no carrinho do cliente logado
     function getProdutos() {
 
         const dbRef = ref(getDatabase());

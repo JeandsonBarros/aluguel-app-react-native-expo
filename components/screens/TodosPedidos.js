@@ -15,7 +15,7 @@ function TodosPedidos() {
 
     }, [])
 
-    // Obtem todos os pedidos de todos usuários, essa tela é apenas para AMD
+    // Obtém todos os pedidos de todos usuários, essa tela é apenas para AMD
     async function getPedidos() {
 
         try {

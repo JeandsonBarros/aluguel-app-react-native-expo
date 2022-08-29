@@ -10,7 +10,7 @@ function User({ navigation, route }) {
 
     useEffect(() => {
 
-        // Descomente essa parte do código caso queira ter controle de quem é e de quem não adm.
+        // Discomente essa parte do código caso queira ter controle de quem é e de quem não adm.
         /* get(child(ref(getDatabase()), `administradores/${uid}`)).then(response => {
 
             if (response.exists())

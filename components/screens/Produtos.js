@@ -33,7 +33,7 @@ export default function Produtos({ navigation }) {
 
     }, [navigation])
 
-    // Obtem os produtos que estão no banco de dados Realtime Database
+    // Obtém os produtos no banco de dados Realtime Database
     function getProdutos() {
 
         get(child(dbRef, `produtos/`)).then((snapshot) => {

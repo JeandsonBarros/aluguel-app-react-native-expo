@@ -19,7 +19,7 @@ function AdministrarProdutos({ navigation }) {
 
     },[])
 
-    // Obtem os produtos que estão no banco de dados Realtime Database
+    // Obtém os produtos no banco de dados Realtime Database
     function getProdutos() {
 
         const dbRef = ref(getDatabase());

@@ -37,7 +37,7 @@ export default function Login({ navigation }) {
 
     }, [])
 
-    // Registra o usuário no Firebase
+    // Registra o usuário no Firebase authentication 
     async function registrar() {
 
         if (!email || !senha) {

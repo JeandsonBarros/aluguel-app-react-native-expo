@@ -15,7 +15,7 @@ import {
 } from "firebase/auth";
 import ReautenticarModal from "../layouts/ReautenticarModal";
 
-// Component para alterar senha
+// Componente para alterar senha
 function alterarSenhaComponet() {
 
     const [modalVisible, setModalVisible] = useState(false);
@@ -114,7 +114,7 @@ function alterarSenhaComponet() {
     )
 }
 
-// Component para alterar e-mail
+// Componente para alterar e-mail
 function alterarEmailComponet() {
 
     const [modalVisible, setModalVisible] = useState(false);

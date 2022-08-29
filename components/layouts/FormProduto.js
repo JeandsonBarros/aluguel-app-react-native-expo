@@ -28,7 +28,7 @@ export default function FormProduto({ navigation, funcao, produtoEdit }) {
 
     }
 
-    //Função que pegua o arquivo selecionado.
+    //Função que obtêm o arquivo selecionado.
     async function getFile() {
 
         try {

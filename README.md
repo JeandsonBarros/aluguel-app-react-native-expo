@@ -1,14 +1,14 @@
-# App AlugeulApp By React Native Expo
+# App AlugeulApp com React Native Expo + Firebase
 
-In this app powered by React Native Expo and FireBase, people can place orders for product rentals. Who is an administrator can also register, list, edit and remove products, list and change order status. The application also has a shopping cart.
+Neste aplicativo desenvolvido com React Native Expo e FireBase, as pessoas podem fazer pedidos de aluguel de produtos. Quem é administrador também pode cadastrar, listar, editar e remover produtos, listar e alterar os status dos pedidos. O aplicativo também possui carrinho de compras.
 
-![Figure 1](./print_screens.png)
+![Figura 1](./print_screens.png)
 
-## Execution
+## Execução
 
-Installation of dependencies: `npm install`
-Running the app: `expo start` or `npm start`
+Instalação de dependências: `npm install`
+Executando o aplicativo: `expo start` ou `npm start`
 
-This project uses Firebase to store product images and data, user data, and authentication, so you need to pass Firebase settings to the firebase.js file as shown in the following image:
+Este projeto usa o Firebase para armazenar imagens e dados de produtos, dados do usuário e autenticação. Portanto, você precisa passar as configurações do Firebase para o arquivo firebase.js, conforme mostrado na imagem a seguir:
 
-![Figure 2](./print-firebase.png)
+![Figura 2](./print_firebase.png)
