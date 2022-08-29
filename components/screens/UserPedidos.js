@@ -54,7 +54,8 @@ function UserPedidos({navigation}) {
             <Text
                 style={{
                     textAlign: 'center',
-                    marginTop: 5
+                    marginTop: 5,
+                   
                 }}>
                 {aviso}
             </Text>

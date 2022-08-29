@@ -15,7 +15,7 @@ import * as DocumentPicker from 'expo-document-picker';
 
 export default function FormProduto({ navigation, funcao, produtoEdit }) {
 
-    const [uriFile, setUriFile] = useState(produtoEdit ? `https://firebasestorage.googleapis.com/v0/b/aluguel-b40c9.appspot.com/o/${produtoEdit.file}?alt=media&token=6456cde5-728f-4986-821b-43fd59932296` : '')
+    const [uriFile, setUriFile] = useState(produtoEdit ? produtoEdit.file : '')
     const [fileSave, setFileSave] = useState({})
 
     const [produto, setProduto] = useState(produtoEdit ? produtoEdit : { alugado: false });

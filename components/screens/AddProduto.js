@@ -1,5 +1,5 @@
 import { StyleSheet, View, Image, ScrollView } from "react-native";
-import { getStorage, ref as refStorage, uploadBytesResumable } from "firebase/storage";
+import { getStorage, ref as refStorage, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { ref, getDatabase, push } from 'firebase/database'
 import FormProduto from "../layouts/FormProduto";
 import React, { useState } from 'react';
@@ -15,10 +15,13 @@ export default function AddProduto({ navigation }) {
 
             setLoading(true)
 
-            push(ref(getDatabase(), 'produtos/'), { ...produto });
-
             const storageRef = refStorage(getStorage(), "/" + produto.file);
             await uploadBytesResumable(storageRef, file)
+
+            const fileURL = await getDownloadURL(refStorage(getStorage(), '/'+produto.file))   
+            produto.file = fileURL
+
+            push(ref(getDatabase(), 'produtos/'), { ...produto });
 
             setLoading(false)
 

@@ -41,7 +41,7 @@ function CardPedido({ pedido, funcaoStatus }) {
                                                 margin: 5
                                             }}
                                             source={{
-                                                uri: `https://firebasestorage.googleapis.com/v0/b/aluguel-b40c9.appspot.com/o/${produto.file}?alt=media&token=6456cde5-728f-4986-821b-43fd59932296`,
+                                                uri: produto.file,
                                             }}
                                         />
 

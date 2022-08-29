@@ -11,6 +11,10 @@ function AdministrarProdutos({ navigation }) {
 
     useEffect(() => {
         
+        navigation.addListener('focus', () => {
+            getProdutos()
+        });
+
         getProdutos()
 
         return () => {

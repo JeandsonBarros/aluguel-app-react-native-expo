@@ -45,6 +45,7 @@ export default function Produtos({ navigation }) {
                 Object.keys(snapshot.val()).forEach(item => {
                     produtosTemp.push({ ...snapshot.val()[item], key: item })
                 })
+                setAviso('');
 
             } else {
                 setAviso("Sem produtos");

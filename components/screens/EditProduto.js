@@ -1,6 +1,6 @@
 import { Image, StyleSheet, View, Text, ScrollView, TouchableOpacity, Alert } from "react-native";
-import { getStorage, ref as refStorage, uploadBytesResumable, deleteObject } from "firebase/storage";
-import { ref, getDatabase, push, set, remove } from 'firebase/database'
+import { getStorage, ref as refStorage, uploadBytesResumable, getDownloadURL  } from "firebase/storage";
+import { ref, getDatabase, set  } from 'firebase/database'
 import FormProduto from "../layouts/FormProduto";
 import { useState } from "react";
 
@@ -16,18 +16,21 @@ export default function EditProduto({ navigation, route }) {
 
             setLoading(true)
 
-            set(ref(getDatabase(), 'produtos/' + produto.key), { ...produto });
-
+           
             if (file) {
                 const storageRef = refStorage(getStorage(), "/" + produto.file);
-                const dataStatus = await uploadBytesResumable(storageRef, file)
+                await uploadBytesResumable(storageRef, file)
 
-                console.log(dataStatus.state);
+                const fileURL = await getDownloadURL(refStorage(getStorage(), '/'+produto.file))   
+                produto.file = fileURL
+               
             }
+
+            set(ref(getDatabase(), 'produtos/' + produto.key), { ...produto });
 
             setLoading(false)
 
-            navigation.navigate("Home")
+            navigation.navigate("AdministrarProdutos")
 
         } catch (error) {
             console.log(error);

@@ -77,7 +77,7 @@ function Carrinho({ navigation, route }) {
                 />}
             </View>
 
-            <Text>{aviso}</Text>
+            <Text style={{marginLeft: 3, marginTop: 3,}}>{aviso}</Text>
 
             <ListaDeProdutos
                 produtos={produtos}
